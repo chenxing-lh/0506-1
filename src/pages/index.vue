@@ -1,72 +1,106 @@
 <template>
-  <div class="container">
-    <div>
-      <logo />
-      <h1 class="title">
-        template-blank-pc
-      </h1>
-      <h2 class="subtitle">
-        PC空白模板
-      </h2>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-      </div>
-    </div>
+  <div>
+    <el-row :gutter="0" type="flex" justify="center" align="top">
+      <el-col :span="12"></el-col>
+      <el-col :span="12"></el-col>
+    </el-row>
+    <config-group
+      group-name="分组名称"
+      :is-show-name="true"
+      :is-collapsible="true"
+      :is-show-icon="true"
+      icon-color="#5D81F9"
+      :is-show-divider="true"
+    ></config-group>
+    <ve-histogram
+      :data="veHistogramData"
+      :grid="veHistogramGrid"
+      :legend="veHistogramLegend"
+      height="300px"
+    ></ve-histogram>
+    <form-input
+      type="text"
+      placeholder="请输入"
+      label="单行文本"
+      :is-label-visible="true"
+      :status="0"
+      :min="2"
+      :max="30"
+      :require="false"
+      :is-show-min="false"
+      :is-show-max="false"
+      :is-show-customer="false"
+      :rules="formInputRules"
+    ></form-input>
   </div>
 </template>
-
 <script>
-import Logo from '~/components/Logo.vue'
-
 export default {
-  components: {
-    Logo
-  }
+  components: {},
+  data: function() {
+    return {
+      pageName: "首页",
+      veHistogramData: {
+        columns: ["日期", "访问用户", "下单用户", "下单率"],
+        rows: [
+          {
+            日期: "1/1",
+            访问用户: 1393,
+            下单用户: 1093,
+            下单率: 32
+          },
+          {
+            日期: "1/2",
+            访问用户: 3530,
+            下单用户: 3230,
+            下单率: 26
+          },
+          {
+            日期: "1/3",
+            访问用户: 2923,
+            下单用户: 2623,
+            下单率: 76
+          },
+          {
+            日期: "1/4",
+            访问用户: 1723,
+            下单用户: 1423,
+            下单率: 49
+          },
+          {
+            日期: "1/5",
+            访问用户: 3792,
+            下单用户: 3492,
+            下单率: 32.3
+          },
+          {
+            日期: "1/6",
+            访问用户: 4593,
+            下单用户: 4293,
+            下单率: 78
+          }
+        ]
+      },
+      veHistogramGrid: {
+        top: 35,
+        bottom: 10
+      },
+      veHistogramLegend: {
+        top: 5
+      },
+      formInputRules: [
+        {
+          required: false,
+          message: "",
+          trigger: []
+        }
+      ]
+    }
+  },
+  mounted: function() {},
+  watch: {},
+  methods: {},
+  destroyed: function() {}
 }
 </script>
-
-<style>
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
-}
-</style>
+<style lang="less" scoped="scoped"></style>

@@ -1,71 +1,87 @@
+const path = require('path')
 require('dotenv').config()
-const appJson = require('./app.json')
-const ossPath = `http://serverless-platform.deepexi.top/applications/${appJson.appKey}`
-let publicPath = process.env.BUILD_TYPE === 'production' ? ossPath : '/_nuxt/'
-// console.log(process.env)
+const middleware = []
+if (!process.env.NO_LOGIN) {
+  middleware.push('auth')
+}
 export default {
-  srcDir: 'src/',
-  mode: 'spa',
-  /*
-   ** Headers of the page
-   */
-  router: {
-    mode: 'hash'
-  },
-  head: {
-    title: process.env.npm_package_name || '',
-    meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      {
-        hid: 'description',
-        name: 'description',
-        content: process.env.npm_package_description || ''
-      }
-    ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
-  },
-  /*
-   ** Customize the progress-bar color
-   */
-  loading: { color: '#fff' },
-  /*
-   ** Global CSS
-   */
-  css: ['element-ui/lib/theme-chalk/index.css'],
-  /*
-   ** Plugins to load before mounting the App
-   */
-  plugins: ['@/plugins/element-ui'],
-  /*
-   ** Nuxt.js dev-modules
-   */
-  buildModules: [
-    // Doc: https://github.com/nuxt-community/eslint-module
-    // '@nuxtjs/eslint-module'
-  ],
-  /*
-   ** Nuxt.js modules
-   */
-  modules: [
-    // Doc: https://axios.nuxtjs.org/usage
-    '@nuxtjs/axios'
-  ],
-  /*
-   ** Axios module configuration
-   ** See https://axios.nuxtjs.org/options
-   */
-  axios: {},
-  /*
-   ** Build configuration
-   */ 
-  build: {
-    transpile: [/^element-ui/],
-    publicPath: process.env.PUBLIC_PATH || '/_nuxt/',
-
+    srcDir: 'src/',
+    mode: 'spa',
+    router: {
+        mode: 'hash',
+        middleware,
+    },
+    proxy: {
+        '/open-api': {
+            target: 'http://serverless-platform-dev.deepexi.top',
+            secure: false
+        },
+        '/serverless-dev': {
+          target: 'http://serverless-platform-dev.deepexi.top',
+          secure: false
+        },
+    },
     /*
-     ** You can extend webpack config here
+     ** Headers of the page
      */
-    extend(config, ctx) {}
-  }
+    head: {
+        title: process.env.npm_package_name || '',
+        meta: [
+            { charset: 'utf-8' },
+            { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+            { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
+        ],
+        link: [
+            { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+        ],
+        script: []
+    },
+    /*
+     ** Customize the progress-bar color
+     */
+    loading: { color: '#fff' },
+    /*
+     ** Global CSS
+     */
+    css: [
+        'element-ui/lib/theme-chalk/index.css',
+        'normalize.css',
+        '@/static/iconfont/iconfont.css',
+        '@/assets/global.less'
+    ],
+    /*
+     ** Plugins to load before mounting the App
+     */
+    plugins: [
+      '@/plugins/axios',
+      '@/plugins/globalPlugin',
+
+    ],
+    /*
+     ** Nuxt.js dev-modules
+     */
+    buildModules: [],
+    /*
+     ** Nuxt.js modules
+     */
+    modules: [
+        ['nuxt-serverless', {}],
+        ['@nuxtjs/axios', {}],
+        ["@nuxtjs/dotenv", { path: "./" }],
+        '@nuxtjs/proxy'
+
+    ],
+    /*
+     ** Build configuration
+     */
+    build: {
+        transpile: [/^element-ui/],
+        /*
+         ** You can extend webpack config here
+         */
+        extend(config, ctx) {
+
+
+        }
+    }
 }

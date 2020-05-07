@@ -1,6 +1,6 @@
-# template-blank-pc
+# nuxt
 
-> PC空白模板
+> Serverless App.
 
 ## Build Setup
 

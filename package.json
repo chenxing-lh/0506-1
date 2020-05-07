@@ -1,29 +1,36 @@
 {
-  "name": "template-blank-pc",
+  "name": "myapp",
   "version": "1.0.0",
-  "description": "PC空白模板",
-  "author": "Rihel",
+  "description": "Serverless App.",
+  "author": "",
   "private": true,
   "scripts": {
+    "dev:nologin": "cross-env NO_LOGIN=1 nuxt",
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "nuxt generate",
-    "lint": "eslint --ext .js,.vue --ignore-path .gitignore ."
+    "generate": "nuxt generate"
   },
   "dependencies": {
-    "@nuxtjs/axios": "^5.3.6",
+    "@nuxtjs/axios": "^5.8.0",
+    "@nuxtjs/dotenv": "^1.4.1",
     "dotenv": "^8.1.0",
-    "element-ui": "^2.4.11",
-    "nuxt": "2.9.2",
-    "@nuxtjs/eslint-config": "^1.0.1",
-    "@nuxtjs/eslint-module": "^1.0.0",
-    "babel-eslint": "^10.0.1",
-    "eslint": "^6.1.0",
-    "eslint-plugin-nuxt": ">=0.4.2",
-    "sass-loader": "^8.0.0",
+    "axios": "^0.19.0",
+    "crypto-js": "^4.0.0",
+    "dayjs": "^1.8.17",
+    "echarts": "^4.5.0",
+    "element-ui": "^2.12.0",
+    "js-cookie": "^2.2.1",
+    "lodash": "^4.17.15",
+    "normalize.css": "^8.0.1",
+    "nuxt": "^2.0.0",
+    "nuxt-serverless": "^1.0.4",
+    "v-charts": "^1.19.0"
+  },
+  "devDependencies": {
+    "cross-env": "^6.0.3",
     "less": "^3.10.3",
     "less-loader": "^5.0.0",
-    "node-sass": "^4.12.0"
+    "svg-sprite-loader": "^4.1.6"
   }
 }

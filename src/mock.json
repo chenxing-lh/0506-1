@@ -1,0 +1,71 @@
+{
+    "menus": [
+        {
+            "name": "首页",
+            "path": "/",
+            "icon": "home--fill",
+            "level": 1,
+            "sort": 0,
+            "menu_id": "1588750444499",
+            "parent_id": 0,
+            "children": [],
+            "mark": "/"
+        },
+        {
+            "name": "布局组件",
+            "path": "buju",
+            "icon": "home--fill",
+            "level": 1,
+            "sort": 1,
+            "menu_id": "1588844440092",
+            "parent_id": 0,
+            "children": []
+        },
+        {
+            "name": "基础组件",
+            "path": "jic",
+            "icon": "home--fill",
+            "level": 1,
+            "sort": 2,
+            "menu_id": "1588844445286",
+            "parent_id": 0,
+            "children": []
+        },
+        {
+            "name": "图表组件",
+            "path": "t",
+            "icon": "home--fill",
+            "level": 1,
+            "sort": 3,
+            "menu_id": "1588844451086",
+            "parent_id": 0,
+            "children": []
+        },
+        {
+            "name": "表单组件",
+            "path": "iaodan",
+            "icon": "home--fill",
+            "level": 1,
+            "sort": 4,
+            "menu_id": "1588844456151",
+            "parent_id": 0,
+            "children": []
+        }
+    ],
+    "logo": {
+        "type": 2,
+        "image": "",
+        "text": "LOGO",
+        "query": {}
+    },
+    "menuCollapse": false,
+    "users": [
+        {
+            "avatar": "https://deepexi.oss-cn-shenzhen.aliyuncs.com/xpaas-console/user-portrait.png",
+            "name": "admin",
+            "urlType": 0,
+            "query": {},
+            "newWindow": false
+        }
+    ]
+}
