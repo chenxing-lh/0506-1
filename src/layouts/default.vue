@@ -61,17 +61,7 @@ export default {
     },
   },
   mounted() {
-    if (this.$store.state._token) {
-      this.$store.dispatch("getRoles").then((res) => {
-        this.roles = res.map((role) => role.name);
-        this.menuData = this.getMenus(apiData.menus, []);
-        this.$store.commit("setVisibleRoutes", this.visibleRoutes);
-        if (this.visibleRoutes.length <= 0) {
-          this.isHavePagePermission = false;
-        }
-        this.loading = false;
-      });
-    }
+
   },
   methods: {
     getMenus(menus, targetMenus) {

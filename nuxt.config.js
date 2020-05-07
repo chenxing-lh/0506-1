@@ -1,16 +1,23 @@
 const path = require('path')
 require('dotenv').config()
 const middleware = []
-if (!process.env.NO_LOGIN) {
-  middleware.push('auth')
+// if (!process.env.NO_LOGIN) {
+//   middleware.push('auth')
+// }
+
+const router = {
+    mode: 'hash',
+    middleware
 }
+
+if(process.env.NODE_ENV === 'production'){
+    router.base = './'
+}
+
 export default {
     srcDir: 'src/',
     mode: 'spa',
-    router: {
-        mode: 'hash',
-        middleware,
-    },
+    router,
     proxy: {
         '/open-api': {
             target: 'http://serverless-platform-dev.deepexi.top',
@@ -32,7 +39,7 @@ export default {
             { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
         ],
         link: [
-            { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+            { rel: 'icon', type: 'image/x-icon', href: './favicon.ico' }
         ],
         script: []
     },
@@ -65,7 +72,7 @@ export default {
      ** Nuxt.js modules
      */
     modules: [
-        ['nuxt-serverless', {}],
+        ['nuxt-serverless', { iam: false }],
         ['@nuxtjs/axios', {}],
         ["@nuxtjs/dotenv", { path: "./" }],
         '@nuxtjs/proxy'
@@ -75,6 +82,7 @@ export default {
      ** Build configuration
      */
     build: {
+        publicPath: process.env.PUBLIC_PATH || '/_nuxt/',
         transpile: [/^element-ui/],
         /*
          ** You can extend webpack config here

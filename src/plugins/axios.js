@@ -1,8 +1,8 @@
 /*
  * @Author: Han
  * @Date: 2019-05-08 15:13:59
- * @Last Modified by: Han
- * @Last Modified time: 2019-06-03 14:26:26
+ * @Last Modified by: Jet.chan
+ * @Last Modified time: 2020-04-16 20:26:02
  * @Description 请求拦截，适配 restEasy 后端API服务框架，若数据格式不符合下面的数据格式，则会按照 httpStatusCode 正常触发对应的事件。
  * @Example
  * 适配api返回格式：
@@ -34,7 +34,7 @@ export default function({ $axios, store, app, redirect }) {
     $axios.onResponse(resp => {
         const { data, config } = resp
         const {url: requestUrl} = config
-        const isServerlessPatform = /^\/[a-zA-Z0-9\-]+\/serverless-platform/.test(requestUrl)
+        const isServerlessPatform = /(^\/[a-zA-Z0-9\-])*\/serverless-platform/.test(requestUrl)
         const successCode = isServerlessPatform ? 1 : 0 // serverless团队接口规范里面code的成功状态值是1，其他接口是0
 
         const code = parseInt(data.code)
