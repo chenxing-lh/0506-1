@@ -27,7 +27,7 @@
       <sl-menu :menuData="menuData"></sl-menu>
       <el-main class="drag-area">
         <div class="preview-container">
-          <nuxt v-if="!loading && isHavePagePermission" />
+          <nuxt/>
         </div>
       </el-main>
     </el-container>
@@ -51,7 +51,7 @@ export default {
       tmpMenus: [],
       roles: [],
       visibleRoutes: [],
-      loading: true,
+      loading: false,
       isHavePagePermission: true,
     };
   },
@@ -61,7 +61,7 @@ export default {
     },
   },
   mounted() {
-
+    this.menuData = apiData.menus
   },
   methods: {
     getMenus(menus, targetMenus) {
