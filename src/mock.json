@@ -8,6 +8,7 @@
             "sort": 0,
             "menu_id": "1588750444499",
             "parent_id": 0,
+            "roles": [],
             "children": [],
             "mark": "/"
         },
@@ -19,6 +20,7 @@
             "sort": 1,
             "menu_id": "1588844440092",
             "parent_id": 0,
+            "roles": [],
             "children": []
         },
         {
@@ -29,6 +31,7 @@
             "sort": 2,
             "menu_id": "1588844445286",
             "parent_id": 0,
+            "roles": [],
             "children": []
         },
         {
@@ -39,6 +42,7 @@
             "sort": 3,
             "menu_id": "1588844451086",
             "parent_id": 0,
+            "roles": [],
             "children": []
         },
         {
@@ -49,6 +53,7 @@
             "sort": 4,
             "menu_id": "1588844456151",
             "parent_id": 0,
+            "roles": [],
             "children": []
         }
     ],

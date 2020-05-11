@@ -2,10 +2,10 @@
   <div>
     <form-container
       :inline="false"
-      position="left"
-      primary-text="提交"
+      position="center"
       :have-second="true"
       second-text="重置"
+      v-roles="''"
     >
       <form-input
         :in-container="true"
@@ -22,18 +22,23 @@
         :is-show-max="false"
         :is-show-customer="false"
         :rules="formInputRules"
+        v-roles="''"
       ></form-input>
-      <form-radio
-        :select-value="1"
-        :select-option="formRadioSelectoption"
-        label="单选框"
+      <form-input
+        type="text"
+        placeholder="请输入"
+        label="单行文本"
         :is-label-visible="true"
         :status="0"
+        :min="2"
+        :max="30"
         :require="false"
+        :is-show-min="false"
+        :is-show-max="false"
         :is-show-customer="false"
-        :options="formRadioOptions"
-        :rules="formRadioRules"
-      ></form-radio>
+        :rules="formInputRules_1"
+        v-roles="''"
+      ></form-input>
       <form-date
         type="datePart"
         placeholder="请输入"
@@ -49,7 +54,37 @@
         :options="formDateOptions"
         :select-option="formDateSelectoption"
         :rules="formDateRules"
+        v-roles="''"
       ></form-date>
+      <form-date
+        type="datePart"
+        placeholder="请输入"
+        label="日期区间"
+        :is-label-visible="true"
+        :status="0"
+        unit-part="datetimerange"
+        :default-part="false"
+        :require="false"
+        :default-end-time="0"
+        :default-start-time="0"
+        :is-show-customer="false"
+        :options="formDateOptions_1"
+        :select-option="formDateSelectoption_1"
+        :rules="formDateRules_1"
+        v-roles="''"
+      ></form-date>
+      <form-radio
+        :select-value="1"
+        :select-option="formRadioSelectoption"
+        label="单选框"
+        :is-label-visible="true"
+        :status="0"
+        :require="false"
+        :is-show-customer="false"
+        :options="formRadioOptions"
+        :rules="formRadioRules"
+        v-roles="''"
+      ></form-radio>
       <form-input
         :in-container="true"
         type="number"
@@ -64,21 +99,8 @@
         :is-show-min="false"
         :is-show-max="false"
         :is-show-customer="false"
-        :rules="formInputRules_1"
-      ></form-input>
-      <form-input
-        type="text"
-        placeholder="请输入"
-        label="单行文本"
-        :is-label-visible="true"
-        :status="0"
-        :min="2"
-        :max="30"
-        :require="false"
-        :is-show-min="false"
-        :is-show-max="false"
-        :is-show-customer="false"
         :rules="formInputRules_2"
+        v-roles="''"
       ></form-input>
       <form-input
         :in-container="true"
@@ -95,6 +117,7 @@
         :is-show-max="false"
         :is-show-customer="false"
         :rules="formInputRules_3"
+        v-roles="''"
       ></form-input>
       <form-input
         :in-container="true"
@@ -111,23 +134,26 @@
         :is-show-max="false"
         :is-show-customer="false"
         :rules="formInputRules_4"
+        v-roles="''"
       ></form-input>
-      <form-date
-        type="datePart"
+      <submit-item
+        :in-container="true"
+        type="number"
         placeholder="请输入"
-        label="日期区间"
+        label="数字框"
         :is-label-visible="true"
         :status="0"
-        unit-part="datetimerange"
-        :default-part="false"
+        :step="1"
+        :min="2"
+        :max="30"
         :require="false"
-        :default-end-time="0"
-        :default-start-time="0"
+        :is-show-min="false"
+        :is-show-max="false"
         :is-show-customer="false"
-        :options="formDateOptions_1"
-        :select-option="formDateSelectoption_1"
-        :rules="formDateRules_1"
-      ></form-date>
+        :rules="submitItemRules"
+        :inline="false"
+        v-roles="''"
+      ></submit-item>
       <form-radio
         :select-value="1"
         :select-option="formRadioSelectoption_1"
@@ -138,6 +164,7 @@
         :is-show-customer="false"
         :options="formRadioOptions_1"
         :rules="formRadioRules_1"
+        v-roles="''"
       ></form-radio>
       <form-input
         :in-container="true"
@@ -154,17 +181,8 @@
         :is-show-max="false"
         :is-show-customer="false"
         :rules="formInputRules_5"
+        v-roles="''"
       ></form-input>
-      <submit-item
-        :inline="false"
-        position="left"
-        primary-text="提交"
-        :have-second="true"
-        second-text="重置"
-        :query="submitItemQuery"
-        :body="submitItemBody"
-        :headers="submitItemHeaders"
-      ></submit-item>
     </form-container>
     <form-input
       type="text"
@@ -179,6 +197,7 @@
       :is-show-max="false"
       :is-show-customer="false"
       :rules="formInputRules_6"
+      v-roles="''"
     ></form-input>
   </div>
 </template>
@@ -189,6 +208,67 @@ export default {
     return {
       pageName: "布局组件",
       formInputRules: [
+        {
+          required: false,
+          message: "",
+          trigger: []
+        }
+      ],
+      formInputRules_1: [
+        {
+          required: false,
+          message: "",
+          trigger: []
+        }
+      ],
+      formDateOptions: [
+        {
+          label: "秒",
+          value: "datetimerange"
+        },
+        {
+          label: "日",
+          value: "daterange"
+        }
+      ],
+      formDateSelectoption: [
+        {
+          label: "秒",
+          value: "datetimerange"
+        },
+        {
+          label: "日",
+          value: "daterange"
+        }
+      ],
+      formDateRules: [
+        {
+          required: false,
+          message: "",
+          trigger: []
+        }
+      ],
+      formDateOptions_1: [
+        {
+          label: "秒",
+          value: "datetimerange"
+        },
+        {
+          label: "日",
+          value: "daterange"
+        }
+      ],
+      formDateSelectoption_1: [
+        {
+          label: "秒",
+          value: "datetimerange"
+        },
+        {
+          label: "日",
+          value: "daterange"
+        }
+      ],
+      formDateRules_1: [
         {
           required: false,
           message: "",
@@ -226,40 +306,6 @@ export default {
           trigger: []
         }
       ],
-      formDateOptions: [
-        {
-          label: "秒",
-          value: "datetimerange"
-        },
-        {
-          label: "日",
-          value: "daterange"
-        }
-      ],
-      formDateSelectoption: [
-        {
-          label: "秒",
-          value: "datetimerange"
-        },
-        {
-          label: "日",
-          value: "daterange"
-        }
-      ],
-      formDateRules: [
-        {
-          required: false,
-          message: "",
-          trigger: []
-        }
-      ],
-      formInputRules_1: [
-        {
-          required: false,
-          message: "",
-          trigger: []
-        }
-      ],
       formInputRules_2: [
         {
           required: false,
@@ -281,27 +327,7 @@ export default {
           trigger: []
         }
       ],
-      formDateOptions_1: [
-        {
-          label: "秒",
-          value: "datetimerange"
-        },
-        {
-          label: "日",
-          value: "daterange"
-        }
-      ],
-      formDateSelectoption_1: [
-        {
-          label: "秒",
-          value: "datetimerange"
-        },
-        {
-          label: "日",
-          value: "daterange"
-        }
-      ],
-      formDateRules_1: [
+      submitItemRules: [
         {
           required: false,
           message: "",
@@ -346,9 +372,6 @@ export default {
           trigger: []
         }
       ],
-      submitItemQuery: {},
-      submitItemBody: {},
-      submitItemHeaders: {},
       formInputRules_6: [
         {
           required: false,

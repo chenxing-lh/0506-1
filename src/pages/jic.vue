@@ -11,6 +11,7 @@
       :url_type="0"
       :page_new_window="false"
       :href_new_window="false"
+      v-roles="''"
       class="text_1"
     ></config-text>
     <config-button
@@ -27,6 +28,7 @@
       :url_type="0"
       :page_new_window="false"
       :href_new_window="false"
+      v-roles="''"
       class="button_2"
     ></config-button>
     <config-title
@@ -41,377 +43,440 @@
       :url_type="0"
       :page_new_window="false"
       :href_new_window="false"
+      v-roles="''"
     ></config-title>
     <config-icon
       icon="Icon_exclusiveemotion-line"
       :icon-size="34"
       icon-color="#606266"
+      v-roles="''"
       class="icon_5"
     ></config-icon>
     <config-icon
       icon="Icon_exclusiveemotion-line"
       :icon-size="34"
       icon-color="#606266"
+      v-roles="''"
       class="icon_9"
     ></config-icon>
     <config-icon
       icon="Icon_exclusiveemotion-line"
       :icon-size="34"
       icon-color="#606266"
+      v-roles="''"
       class="icon_8"
     ></config-icon>
     <config-icon
       icon="Icon_exclusivegroup-fill"
       :icon-size="34"
       icon-color="#606266"
+      v-roles="''"
       class="icon_7"
     ></config-icon>
     <config-icon
       icon="Icon_exclusivegroup-fill"
       :icon-size="34"
       icon-color="#606266"
+      v-roles="''"
       class="icon_3"
     ></config-icon>
     <config-icon
       icon="Icon_exclusivegroup-fill"
       :icon-size="34"
       icon-color="#606266"
+      v-roles="''"
       class="icon_3"
     ></config-icon>
     <config-icon
       icon="Icon_exclusivegroup-fill"
       :icon-size="34"
       icon-color="#606266"
+      v-roles="''"
       class="icon_3"
     ></config-icon>
     <config-icon
       icon="Icon_exclusivegroup-fill"
       :icon-size="34"
       icon-color="#606266"
+      v-roles="''"
       class="icon_3"
     ></config-icon>
     <config-icon
       icon="Icon_exclusivegroup-fill"
       :icon-size="34"
       icon-color="#606266"
+      v-roles="''"
       class="icon_3"
     ></config-icon>
     <config-icon
       icon="Icon_exclusivegroup-fill"
       :icon-size="34"
       icon-color="#606266"
+      v-roles="''"
       class="icon_3"
     ></config-icon>
     <config-icon
       icon="Icon_exclusivegroup-fill"
       :icon-size="34"
       icon-color="#606266"
+      v-roles="''"
       class="icon_3"
     ></config-icon>
     <config-icon
       icon="Icon_exclusivegroup-fill"
       :icon-size="34"
       icon-color="#606266"
+      v-roles="''"
       class="icon_3"
     ></config-icon>
     <config-icon
       icon="Icon_exclusivegroup-fill"
       :icon-size="34"
       icon-color="#606266"
+      v-roles="''"
       class="icon_3"
     ></config-icon>
     <config-icon
       icon="Icon_exclusivegroup-fill"
       :icon-size="34"
       icon-color="#606266"
+      v-roles="''"
       class="icon_3"
     ></config-icon>
     <config-icon
       icon="Icon_exclusivegroup-fill"
       :icon-size="34"
       icon-color="#606266"
+      v-roles="''"
       class="icon_3"
     ></config-icon>
     <config-icon
       icon="Icon_exclusivegroup-fill"
       :icon-size="34"
       icon-color="#606266"
+      v-roles="''"
       class="icon_3"
     ></config-icon>
     <config-icon
       icon="Icon_exclusivegroup-fill"
       :icon-size="34"
       icon-color="#606266"
+      v-roles="''"
       class="icon_3"
     ></config-icon>
     <config-icon
       icon="Icon_exclusivegroup-fill"
       :icon-size="34"
       icon-color="#606266"
+      v-roles="''"
       class="icon_3"
     ></config-icon>
     <config-icon
       icon="Icon_exclusivegroup-fill"
       :icon-size="34"
       icon-color="#606266"
+      v-roles="''"
       class="icon_3"
     ></config-icon>
     <config-icon
       icon="Icon_exclusivegroup-fill"
       :icon-size="34"
       icon-color="#606266"
+      v-roles="''"
       class="icon_3"
     ></config-icon>
     <config-icon
       icon="Icon_exclusivegroup-fill"
       :icon-size="34"
       icon-color="#606266"
+      v-roles="''"
       class="icon_3"
     ></config-icon>
     <config-icon
       icon="Icon_exclusivegroup-fill"
       :icon-size="34"
       icon-color="#606266"
+      v-roles="''"
       class="icon_3"
     ></config-icon>
     <config-icon
       icon="Icon_exclusivegroup-fill"
       :icon-size="34"
       icon-color="#606266"
+      v-roles="''"
       class="icon_3"
     ></config-icon>
     <config-icon
       icon="Icon_exclusivegroup-fill"
       :icon-size="34"
       icon-color="#606266"
+      v-roles="''"
       class="icon_3"
     ></config-icon>
     <config-icon
       icon="Icon_exclusivegroup-fill"
       :icon-size="34"
       icon-color="#606266"
+      v-roles="''"
       class="icon_3"
     ></config-icon>
     <config-icon
       icon="Icon_exclusivegroup-fill"
       :icon-size="34"
       icon-color="#606266"
+      v-roles="''"
       class="icon_3"
     ></config-icon>
     <config-icon
       icon="Icon_exclusivegroup-fill"
       :icon-size="34"
       icon-color="#606266"
+      v-roles="''"
       class="icon_3"
     ></config-icon>
     <config-icon
       icon="Icon_exclusivegroup-fill"
       :icon-size="34"
       icon-color="#606266"
+      v-roles="''"
       class="icon_3"
     ></config-icon>
     <config-icon
       icon="Icon_exclusivegroup-fill"
       :icon-size="34"
       icon-color="#606266"
+      v-roles="''"
       class="icon_3"
     ></config-icon>
     <config-icon
       icon="Icon_exclusivegroup-fill"
       :icon-size="34"
       icon-color="#606266"
+      v-roles="''"
       class="icon_3"
     ></config-icon>
     <config-icon
       icon="Icon_exclusivegroup-fill"
       :icon-size="34"
       icon-color="#606266"
+      v-roles="''"
       class="icon_3"
     ></config-icon>
     <config-icon
       icon="Icon_exclusiveemotion-line"
       :icon-size="34"
       icon-color="#084FDD"
+      v-roles="''"
       class="icon_6"
     ></config-icon>
     <config-icon
       icon="Icon_exclusivegroup-fill"
       :icon-size="34"
       icon-color="#606266"
+      v-roles="''"
       class="icon_3"
     ></config-icon>
     <config-icon
       icon="Icon_exclusivegroup-fill"
       :icon-size="34"
       icon-color="#606266"
+      v-roles="''"
       class="icon_3"
     ></config-icon>
     <config-icon
       icon="Icon_exclusiveemotion-line"
       :icon-size="34"
       icon-color="#084FDD"
+      v-roles="''"
       class="icon_3"
     ></config-icon>
     <config-icon
       icon="Icon_exclusivegroup-fill"
       :icon-size="34"
       icon-color="#606266"
+      v-roles="''"
       class="icon_3"
     ></config-icon>
     <config-icon
       icon="Icon_exclusivegroup-fill"
       :icon-size="34"
       icon-color="#606266"
+      v-roles="''"
       class="icon_3"
     ></config-icon>
     <config-icon
       icon="Icon_exclusivegroup-fill"
       :icon-size="34"
       icon-color="#606266"
+      v-roles="''"
       class="icon_3"
     ></config-icon>
     <config-icon
       icon="Icon_exclusivegroup-fill"
       :icon-size="34"
       icon-color="#606266"
+      v-roles="''"
       class="icon_3"
     ></config-icon>
     <config-icon
       icon="Icon_exclusivegroup-fill"
       :icon-size="34"
       icon-color="#606266"
+      v-roles="''"
       class="icon_3"
     ></config-icon>
     <config-icon
       icon="Icon_exclusivegroup-fill"
       :icon-size="34"
       icon-color="#606266"
+      v-roles="''"
       class="icon_3"
     ></config-icon>
     <config-icon
       icon="Icon_exclusivegroup-fill"
       :icon-size="34"
       icon-color="#606266"
+      v-roles="''"
       class="icon_3"
     ></config-icon>
     <config-icon
       icon="Icon_exclusivegroup-fill"
       :icon-size="34"
       icon-color="#606266"
+      v-roles="''"
       class="icon_3"
     ></config-icon>
     <config-icon
       icon="Icon_exclusiveemotion-line"
       :icon-size="34"
       icon-color="#084FDD"
+      v-roles="''"
       class="icon_3"
     ></config-icon>
     <config-icon
       icon="Icon_exclusivegroup-fill"
       :icon-size="34"
       icon-color="#606266"
+      v-roles="''"
       class="icon_3"
     ></config-icon>
     <config-icon
       icon="Icon_exclusivegroup-fill"
       :icon-size="34"
       icon-color="#606266"
+      v-roles="''"
       class="icon_3"
     ></config-icon>
     <config-icon
       icon="Icon_exclusivegroup-fill"
       :icon-size="34"
       icon-color="#606266"
+      v-roles="''"
       class="icon_3"
     ></config-icon>
     <config-icon
       icon="Icon_exclusivegroup-fill"
       :icon-size="34"
       icon-color="#606266"
+      v-roles="''"
       class="icon_3"
     ></config-icon>
     <config-icon
       icon="Icon_exclusivegroup-fill"
       :icon-size="34"
       icon-color="#606266"
+      v-roles="''"
       class="icon_3"
     ></config-icon>
     <config-icon
       icon="Icon_exclusivegroup-fill"
       :icon-size="34"
       icon-color="#606266"
+      v-roles="''"
       class="icon_3"
     ></config-icon>
     <config-icon
       icon="Icon_exclusivegroup-fill"
       :icon-size="34"
       icon-color="#606266"
+      v-roles="''"
       class="icon_3"
     ></config-icon>
     <config-icon
       icon="Icon_exclusiveemotion-line"
       :icon-size="34"
       icon-color="#084FDD"
+      v-roles="''"
       class="icon_3"
     ></config-icon>
     <config-icon
       icon="Icon_exclusiveemotion-line"
       :icon-size="34"
       icon-color="#606266"
+      v-roles="''"
       class="icon_3"
     ></config-icon>
     <config-icon
       icon="Icon_exclusiveemotion-line"
       :icon-size="34"
       icon-color="#084FDD"
+      v-roles="''"
       class="icon_3"
     ></config-icon>
     <config-icon
       icon="Icon_exclusiveemotion-line"
       :icon-size="34"
       icon-color="#606266"
+      v-roles="''"
       class="icon_3"
     ></config-icon>
     <config-icon
       icon="Icon_exclusiveemotion-line"
       :icon-size="34"
       icon-color="#606266"
+      v-roles="''"
       class="icon_3"
     ></config-icon>
     <config-icon
       icon="Icon_exclusiveemotion-line"
       :icon-size="34"
       icon-color="#606266"
+      v-roles="''"
       class="icon_3"
     ></config-icon>
     <config-icon
       icon="Icon_exclusiveemotion-line"
       :icon-size="34"
       icon-color="#606266"
+      v-roles="''"
       class="icon_3"
     ></config-icon>
     <config-icon
       icon="Icon_exclusiveemotion-line"
       :icon-size="34"
       icon-color="#606266"
+      v-roles="''"
       class="icon_3"
     ></config-icon>
     <config-icon
       icon="Icon_exclusiveemotion-line"
       :icon-size="34"
       icon-color="#606266"
+      v-roles="''"
       class="icon_3"
     ></config-icon>
     <config-icon
       icon="Icon_exclusiveemotion-line"
       :icon-size="34"
       icon-color="#606266"
+      v-roles="''"
       class="icon_3"
     ></config-icon>
     <config-icon
       icon="Icon_exclusivegroup-line"
       :icon-size="34"
       icon-color="#606266"
+      v-roles="''"
       class="icon_3"
     ></config-icon>
     <config-image
@@ -421,6 +486,7 @@
       :init-width="200"
       :height="1474"
       :width="1080"
+      v-roles="''"
       class="image_4"
     ></config-image>
     <config-image
@@ -430,10 +496,11 @@
       :init-width="200"
       :height="632"
       :width="888"
+      v-roles="''"
       class="image_10"
     ></config-image>
-    <el-row :gutter="0" type="flex" justify="center" align="top">
-      <el-col :span="12">
+    <el-row :gutter="0" type="flex" justify="center" align="top" v-roles="''">
+      <el-col :span="12" v-roles="''">
         <config-image
           url="https://serverless-platform.oss-cn-shenzhen.aliyuncs.com/temp/02ac5f9401faa498520d87a7c8411e43.png"
           init-url="https://serverless-platform.oss-cn-shenzhen.aliyuncs.com/temp/02ac5f9401faa498520d87a7c8411e43.png"
@@ -441,10 +508,11 @@
           :init-width="200"
           :height="200"
           :width="200"
+          v-roles="''"
           class="image_12"
         ></config-image>
       </el-col>
-      <el-col :span="12">
+      <el-col :span="12" v-roles="''">
         <config-image
           url="http://serverless-platform.oss-cn-shenzhen.aliyuncs.com/temp/56887030400cb0952361c037dc269d4b.png"
           init-url="https://serverless-platform.oss-cn-shenzhen.aliyuncs.com/temp/02ac5f9401faa498520d87a7c8411e43.png"
@@ -452,6 +520,7 @@
           :init-width="200"
           :height="518"
           :width="1125"
+          v-roles="''"
           class="image_11"
         ></config-image>
       </el-col>

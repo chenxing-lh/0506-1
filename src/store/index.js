@@ -2,7 +2,6 @@ import cookie from "js-cookie";
 import cookieKeys from "@/const/cookie-keys";
 import META from "@/const/meta.js";
 import app from "~~/app.json";
-import loginMock from "./login.mock";
 const cookiePath = process.env.COOKIE_PATH;
 
 const envPath = process.env.API_PATH || "/serverless-dev";
@@ -81,8 +80,7 @@ export const actions = {
     const { commit, state, dispatch } = context;
 
     data.appKey = state.appKey;
-    // const res = await this.$axios.$post(`${envPath}/serverless-platform/api/v1/iam/login`, data)
-    const res = loginMock;
+    const res = await this.$axios.$post(`${envPath}/serverless-platform/api/v1/iam/login`, data)
     res.payload._token = res.payload.access_token;
     delete res.payload.token;
     commit("login", res.payload);

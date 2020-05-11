@@ -5,12 +5,14 @@
       :grid="veHistogramGrid"
       :legend="veHistogramLegend"
       height="300px"
+      v-roles="''"
     ></ve-histogram>
     <ve-line
       :data="veLineData"
       :grid="veLineGrid"
       :legend="veLineLegend"
       height="300px"
+      v-roles="''"
     ></ve-line>
     <ve-pie
       :data="vePieData"
@@ -18,24 +20,28 @@
       :settings="vePieSettings"
       :legend="vePieLegend"
       height="300px"
+      v-roles="''"
     ></ve-pie>
     <ve-gauge
       :data="veGaugeData"
       :grid="veGaugeGrid"
       :legend="veGaugeLegend"
       height="300px"
+      v-roles="''"
     ></ve-gauge>
     <ve-ring
       :data="veRingData"
       :grid="veRingGrid"
       :legend="veRingLegend"
       height="320px"
+      v-roles="''"
     ></ve-ring>
     <ve-bar
       :data="veBarData"
       :grid="veBarGrid"
       :legend="veBarLegend"
       height="300px"
+      v-roles="''"
     ></ve-bar>
   </div>
 </template>

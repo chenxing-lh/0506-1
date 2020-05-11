@@ -1,9 +1,9 @@
 const path = require('path')
 require('dotenv').config()
 const middleware = []
-// if (!process.env.NO_LOGIN) {
-//   middleware.push('auth')
-// }
+if (!process.env.NO_LOGIN) {
+  middleware.push('auth')
+}
 
 const router = {
     mode: 'hash',
@@ -72,7 +72,7 @@ export default {
      ** Nuxt.js modules
      */
     modules: [
-        ['nuxt-serverless', { iam: false }],
+        ['nuxt-serverless', {}],
         ['@nuxtjs/axios', {}],
         ["@nuxtjs/dotenv", { path: "./" }],
         '@nuxtjs/proxy'

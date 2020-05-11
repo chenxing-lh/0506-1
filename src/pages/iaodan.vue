@@ -5,7 +5,7 @@
       placeholder="请输入"
       label="单行文本"
       :is-label-visible="true"
-      :status="0"
+      :status="1"
       :min="2"
       :max="30"
       :require="false"
@@ -13,6 +13,7 @@
       :is-show-max="false"
       :is-show-customer="false"
       :rules="formInputRules"
+      v-roles="''"
     ></form-input>
     <form-input
       type="text"
@@ -27,6 +28,7 @@
       :is-show-max="false"
       :is-show-customer="false"
       :rules="formInputRules_1"
+      v-roles="''"
     ></form-input>
     <form-input
       type="textarea"
@@ -41,6 +43,7 @@
       :is-show-max="false"
       :is-show-customer="false"
       :rules="formInputRules_2"
+      v-roles="''"
     ></form-input>
     <form-input
       type="textarea"
@@ -55,6 +58,7 @@
       :is-show-max="false"
       :is-show-customer="false"
       :rules="formInputRules_3"
+      v-roles="''"
     ></form-input>
     <form-input
       type="number"
@@ -70,6 +74,7 @@
       :is-show-max="false"
       :is-show-customer="false"
       :rules="formInputRules_4"
+      v-roles="''"
     ></form-input>
     <form-radio
       :select-value="1"
@@ -82,6 +87,7 @@
       :options="formRadioOptions"
       :rules="formRadioRules"
       v-if="false"
+      v-roles="''"
     ></form-radio>
     <form-radio
       :select-value="1"
@@ -93,6 +99,7 @@
       :is-show-customer="false"
       :options="formRadioOptions_1"
       :rules="formRadioRules_1"
+      v-roles="''"
     ></form-radio>
     <form-radio
       :select-value="1"
@@ -104,6 +111,7 @@
       :is-show-customer="false"
       :options="formRadioOptions_2"
       :rules="formRadioRules_2"
+      v-roles="''"
     ></form-radio>
     <form-radio
       :select-value="1"
@@ -115,6 +123,7 @@
       :is-show-customer="false"
       :options="formRadioOptions_3"
       :rules="formRadioRules_3"
+      v-roles="''"
     ></form-radio>
     <form-radio
       :select-value="1"
@@ -126,6 +135,7 @@
       :is-show-customer="false"
       :options="formRadioOptions_4"
       :rules="formRadioRules_4"
+      v-roles="''"
     ></form-radio>
     <form-check
       label="多选框"
@@ -143,6 +153,7 @@
       :is-show-max="false"
       :is-show-customer="false"
       :rules="formCheckRules"
+      v-roles="''"
     ></form-check>
     <form-select
       placeholder="请选择"
@@ -158,6 +169,7 @@
       :is-show-customer="false"
       :limit="0"
       :rules="formSelectRules"
+      v-roles="''"
     ></form-select>
     <form-date
       type="dateAll"
@@ -172,6 +184,7 @@
       unit-all="datetime"
       :select-option="formDateSelectoption"
       :rules="formDateRules"
+      v-roles="''"
     ></form-date>
     <form-date
       type="datePart"
@@ -188,6 +201,7 @@
       :options="formDateOptions"
       :select-option="formDateSelectoption_1"
       :rules="formDateRules_1"
+      v-roles="''"
     ></form-date>
   </div>
 </template>
